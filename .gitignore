@@ -5,8 +5,8 @@
 # Remix plugin state folders
 deps/
 states/
-.deps
-.states
+.deps/
+.states/
 artifacts
 
 # Debug info
@@ -16,3 +16,5 @@ artifacts
 # Optional
 .env
 .env.local
+
+.git/

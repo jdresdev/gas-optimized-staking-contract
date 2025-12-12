@@ -26,9 +26,10 @@ contract Staking {
     event RewardPaid(address indexed user, uint amount);
 
     // constructor
-    constructor(address _stakingToken, address _rewardToken) {
+    constructor(address _stakingToken, address _rewardToken, uint _rewardRate) {
         stakingToken = IERC20(_stakingToken);
         rewardToken = IERC20(_rewardToken);
+        rewardRate = _rewardRate;
         lastUpdate = block.timestamp; // timestamp of the block in which your transaction is currently being mined
     }
 
@@ -119,6 +120,4 @@ contract Staking {
 
         emit Withdrawn(msg.sender, amount);        
     }
-
-    // internal functions
 }
